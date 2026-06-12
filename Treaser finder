@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int gcd = 1;
+
+        for (int i = 1; i <= a && i <= b && i <= c; i++) {
+            if (a % i == 0 && b % i == 0 && c % i == 0) {
+                gcd = i;
+            }
+        }
+int second;
+
+        if ((a >= b && a <= c) || (a >= c && a <= b)) {
+            second = a;
+        } 
+        else if ((b >= a && b <= c) || (b >= c && b <= a)) {
+            second = b;
+        } 
+        else {
+            second = c;
+        }
+
+        System.out.println("The treasure is in the box which has number "+second+".");
+        System.out.println("The code to open the box is "+gcd+".");
+    }
+}
