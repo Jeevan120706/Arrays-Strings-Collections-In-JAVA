@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        char[] arr = s.toCharArray();
+
+        for (int i = 1; i < arr.length; i += 2) {
+            int digit = arr[i] - '0';   // convert char to int
+            arr[i] = (char)(arr[i - 1] + digit);
+        }
+
+        System.out.println(new String(arr));
+    }
+}
