@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int a = sc.nextInt();
+       int sq = a*a;
+       int last= sq%10;
+       int first=sq/10;
+       
+       if(a<1 || a>9){
+        System.out.println("Invalid Input");
+       }
+       else if(a== (last+first)){
+        System.out.println("00"+a+" is a Neon Number.");
+       }
+       else{
+        System.out.println("000"+a+" is not a Neon Number.");
+       }
+    }
+}
