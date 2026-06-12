@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        int star = 0;
+        int hash = 0;
+
+        // Count characters
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '*') {
+                star++;
+            } else if (s.charAt(i) == '#') {
+                hash++;
+            }
+        }
+
+        int diff = star - hash;
+
+        // Formatting output (2 digits like 01, 02, etc.)
+        if(diff%2==0){
+            System.out.printf("The Difference of the character in the given string: %02d", diff);
+        }
+        else{
+        System.out.printf("The Difference of the character in the given string: %03d", diff);
+        }
+    }
+}
